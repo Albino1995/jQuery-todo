@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <!-- 重置样式 -->
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css">
+    <link rel="shortcut icon" href="image/icon.ico">
+</head>
+<body>
+
+<div class="msg">
+    <span class="msg-content"></span>
+    <button type="button">ok</button>
+</div>
+<!-- 总容器开始 -->
+<div class="container">
+    <h1>ToDo</h1>
+    <form class="add-task">
+        <input name="content" type="text" placeholder="write something..." autofocus autocomplete="off">
+        <button type="submit">submit</button>
+    </form>
+    <!-- 清单列表开始 -->
+    <div class="task-list">
+        <!-- 任务开始 -->
+        <!-- <div class="task-item">
+            <span><input type="checkbox"></span>
+            <span class="task-content">item content1</span>
+            <span>delete</span>
+            <span>detail</span>
+        </div> -->
+        <!-- 任务结束 -->
+    </div>
+    <!-- 清单列表结束 -->
+    <!-- mask -->
+    <div class="task-detail-mask"></div>
+    <!-- 任务详情开始 -->
+    <div class="task-detail" id="task-detail">
+        <!-- <div>
+            <div class="content">下午记得买菜</div>
+            <div>
+                <div class="desc">
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="remind">
+                <input type="date" name="">
+            </div>
+        </div> -->
+    </div>
+    <!-- 任务详情结束 -->
+</div>
+<footer id="footer"><span>© <a href="https://github.com/Albino1995">Albino</a></span></footer>
+<!-- mask -->
+<div class="pop-box-mask"></div>
+<!-- 自定义alert -->
+<div class="pop-box">
+    <div class="pop-title">Delete Confirmation</div>
+    <div class="pop-content">
+        <div class="pop-button-group">
+            <button class="primary confirm">yes</button>
+            <button class="cancel">no</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 总容器结束 -->
+<video class="alerter" src="media/alert.wav"></video>
+<video class="alerter" src="media/create_task.wav"></video>
+<video class="alerter" src="media/update.wav"></video>
+<video class="alerter" src="media/delete.wav"></video>
+<video class="alerter" src="media/done.wav"></video>
+<video class="alerter" src="media/not_done.wav"></video>
+<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.js"></script>
+<script src="node_modules/store/store.js"></script>
+<script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="js/base.js"></script>
+
+</body>
+</html>
